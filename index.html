@@ -1,12 +1,298 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>WCA Tech Center</title>
-  </head>
-  <body>
-    <h1>WCA Tech Center Website</h1>
-    <p>Student-made content coming soon!</p>
-    <img src="http://www.clker.com/cliparts/A/d/K/F/W/a/work-in-progress-md.png" alt="website under construction">
-  </body>
+    <head>
+        <meta charset="utf-8">
+        <title>WCA Tech Center</title>
+        <style>
+            html {
+                height:100%;
+                width:100%;
+                padding:0px;
+                margin:0px;
+            }
+            body {
+                background-color:gray;
+                color:white;
+                height:100%;
+                width:100%;
+                font-family:sans-serif;
+                margin:0px;
+            }
+            p {
+            }
+            #wca-banner {
+                margin-left:auto;
+                margin-right:auto;
+                padding-right:100px;
+                padding-top:40px;
+                display:block;
+            }
+            div.banner {
+                width: 99%;
+                border-style:outset;
+                border-width:10px;
+                border-color:red;
+                background-image:url("https://lh3.googleusercontent.com/HMwcwKfwbamn0pvM6A_mrvxazmZ2dhDrDCG15DkHJtjS3I1pxyI9PKzK2PSJs8l6Sn5ssYKOumvKrz8SYpq1Il1KhbNMxWCa2t--139rRR4Jb0eeRisVOdyPhaxeOTqXyEFd8Cj7=w2400"), url("https://lh3.googleusercontent.com/qfIatjl2r3eJvCB9d330ZnM7Foq428u7TCPFojczJjwKGqGMLnERQvjW-GVMglPoVTG-luao2m0Ut9RHP1tP1AmdOYgTwrtI1TzGxT7aekK45AYZvs0n0BfTMmy2HCAKtqfH8pml=w2400");
+                background-color:black;
+                background-size:150px, 150px;
+                background-repeat:repeat-x, repeat-x;
+                background-position:0px 0px, 0px 150px;
+                display:block;
+            }
+            #banner-amendment {
+                color:gold;
+                width:480px;
+                margin-left:auto;
+                margin-right:auto;
+                display:block;
+                position:relative;
+                bottom:60px;
+                text-align:center;
+            }
+            #ba-text {
+                margin:1px;
+                font-family:monospace;
+                font-size:17px;
+                font-weight:bold;
+                background-color:black;
+                margin-left:100px;
+            }
+            div.toolbar {
+                background-color:gold;
+                width: 99%;
+                margin:none;
+                border-style:outset;
+                border-width:2px 10px 0px;
+                border-color:rgb(64,64,64);
+                display:flex;
+                justify-content:center;
+            }
+            nav {
+                margin:2px;
+                color:black;
+                font-weight:bold;
+                font-family:sans-serif;
+                width:85%;
+                display:flex;
+                justify-content:center;
+            }
+            a {
+                text-decoration:none;
+                color:black;
+            }
+            span.spacer {
+                display:inline-block;
+                margin:auto;
+            }
+            #about {
+                color:black;
+                width:99%;
+                margin:none;
+                border-style:solid;
+                border-width:1px 10px 2px;
+                border-color:rgb(64,64,64);
+                border-style:outset;
+                padding:0px;
+                display:flex;
+                position:relative;
+                height:100%;
+            }
+            #about h1 {
+                text-align:center;
+                border-bottom: 1px solid;
+                font-family:monospace;
+                font-size:300%;
+                margin-top:5px;
+                text-shadow: 1px 1px red, 2px 2px red;
+            }
+            #mission {
+                width:25%;
+                float:left;
+                background-color:white;
+                border-style:solid;
+                padding:0px 5px;
+                overflow-y:scroll;
+            }
+            #mission-title {
+            }
+            #wca-crest {
+                margin-left:auto;
+                margin-right:auto;
+                float:none;
+                display:block;
+            }
+            #motto {
+                color:red;
+                font-weight:bold;
+                font-size:20px;
+                text-align:center;
+                border-style:dashed;
+                border-color:gold;
+                border-width:1px;
+            }
+            .p-header {
+                font-weight:bold;
+                text-decoration:underline;
+            }
+            #news {
+                width:48%;
+                float:left;
+                background-color:black;
+                color:white;
+                border-style:solid;
+                padding:0px 5px;
+                overflow-y:scroll;
+            }
+            #tct-title {
+            }
+            .article-title {
+                text-decoration:underline gold;
+                margin-bottom:0px;
+                font-size:30px;
+            }
+            .article-date {
+                margin:0px;
+                font-style:italic;
+                font-weight:normal;
+            }
+            .article-fp {
+                margin-top:5px;
+            }
+            .article-fp::first-letter {
+                line-height:40px;
+                font-size:55px;
+                float:left;
+                margin:0px 5px;
+                font-family:serif;
+                color:red;
+                font-style:italic;
+            }
+            .article-bp {
+            }
+            #people {
+                width:25%;
+                float:right;
+                background-color:white;
+                border-style:solid;
+                padding:0px 5px;
+                overflow-y:auto;
+            }
+            #people-title {
+            }
+            .profile {
+                border-style:solid;
+                border-width: 0px 0px 1px 0px;
+                overflow-y
+            }
+            .profile:after {
+                content:"";
+                display:table;
+                clear:both;
+            }
+            #nate-wp {
+                float:left;
+                border-color:red;
+                border-style:outset;
+                border-width:5px;
+                width:50%;
+                margin:0px 5px 5px 0px;
+            }
+            #kaylin-hat {
+                float:right;
+                border-color:gold;
+                border-style:outset;
+                border-width:5px;
+                width:50%;
+                margin:0px 5px 5px 0px;
+            }
+            #joel-news {
+                float:left;
+                border-color:red;
+                border-style:outset;
+                border-width:5px;
+                width:50%;
+                margin:0px 5px 5px 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="banner">
+            <img id="wca-banner" src="https://community.wesed.org/image/photo705_NEWEST.png" alt="Wesleyan Banner">
+            <div id="banner-amendment">
+                <h3 id="ba-text">Technology and Digital Media Program</h3>
+            </div>
+        </div>
+        <div class="toolbar">
+            <nav role="navigation" aria-label="Main Menu">
+                <span class="mmlink"><a href="#about">About</a></span>
+                <span class="spacer"> | </span>
+                <span class="mmlink"><a href="">Classes</a></span>
+                <span class="spacer"> | </span>
+                <span class="mmlink"><a href="">Equipment</a></span>
+                <span class="spacer"> | </span>
+                <span class="mmlink"><a href="">Student Showcase</a></span>
+            </nav>
+        </div>
+        <div id="about">
+            <div id="mission">
+                <h1 id="mission-title">Our Mission</h1>
+                <p>
+                    The Technology and Communications Program endeavors to support the overall vision of Wesleyan Christian Academy:
+                </p>
+                <div id="motto">
+                    TO KNOW AND LIVE<br>THE TRUTH
+                </div>
+                <p>
+                    We believe that to both know and live the truth in the twenty-first century, students must have technological proficiency without technological dependency.
+                </p>
+                <p>
+                    <span class="p-header">Knowing the Truth:</span> Our program equips students with discernment in finding and evaluating information digitally.   With true and false information saturating all aspects of life in the twenty-first century, students must be prepared to critically examine sources and apply the principles of Philippians 4:8.
+                </p>
+                <p>
+                    <span class="p-header">Living the Truth:</span> Our program equips students with the skills to be disciples of Christ in the digital world.  With greater ease and prevalence of communication comes greater responsibility to use these tools for the glory of God and live up to the exhortation of Titus 2:7.
+                </p>
+            </div>
+            <div id="news">
+                <h1 id="tct-title">The Tech Center Times</h1>
+                <h2 class="article-title">Tech Center Grand Opening!</h2>
+                <h3 class="article-date">04 October 2018</h3>
+                <p class="article-fp">
+                    Anyone who has walked the halls of Wesleyan since the end of the 2017-2018 school year has probably noticed significant renovations being done to room 66 - the former STEM lab.  Along with many other relocations, the STEM lab moved to the former small chapel, while the elementary computer lab relocated to room 66.  Except, this was not merely a move, but a transformation.  Following her retirement, Mrs. Lori Puckett's elementary computer lab has been replaced with a more multi-purpose Tech Center with Dr. Nathaniel Jarrett at the helm.
+                </p>
+                <p class="article-bp">
+                    The renovations included many changes, some more obvious than others.  The wall separating the room from the hallway gained a window, making it feel more connected to the ebb and flow of daily life at Wesleyan.  The ceiling was removed, exposing the ductwork, which was then painted black for a modern, industrial aesthetic.  The lights went out with the ceiling, but new, dimming lights have been added to complement the modern look.  The old linoleum floor has been replaced with hardwoods, and the room is filled with new furniture, including couches, hightop tables, and round whiteboard tables.  All together, these elements create a comfortable and creative atmosphere for students to learn and collaborate.
+                </p>
+                <p class="article-bp">
+                    Currently, the tech center is serving a dual role as a computer lab both for elementary students and for the 7th and 8th grade computer programming elective.  Elementary students sit at the whiteboard tables to work on Math, Reading, or Typing activities on chromebooks, while middle school students make full use of the space to spread out and reconvene as they use new laptops to work on designing their own websites.
+                </p>
+                <p class="article-bp">
+                    There are grand ambitions for the tech center moving forward.  Starting in the 2019-2020 school year, the tech center will begin to be used by high school students for two new programming electives as well as for taking both high school and college classes online through Liberty University.  The Tech Center will continue to host the middle school programming elective as well, though the limitations of space and scheduling will require the elementary students to begin receiving their computer class in their classrooms instead of in the lab itself.
+                </p>
+                <p class="article-bp">
+                    When you walk by the tech center, peek in the new window and take a look at what we're doing.  You can look forward to seeing more activity there in years to come, as well as new initiatives to support and supplement the already robust Christian education that Wesleyan provides!
+                </p>
+            </div>
+            <div id="people">
+                <h1 id="people-title">Our People</h1>
+                <div class="profile">
+                    <img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-1/p160x160/44232095_10155773608997337_1038619093281800192_n.jpg?_nc_cat=104&_nc_ht=scontent-iad3-1.xx&oh=91ff97a587ffb8f27de4764de8270a67&oe=5CAA9591" alt="Picture of Dr. Jarrett" id="nate-wp">
+                    <p class="p-text">
+                        <span class="p-header">Dr. Nathaniel Jarrett</span> teaches classes on programming and the principles of computer science to middle school and high school students.  He also teaches basic computer skills to elementary students. He received his doctorate from the University of North Texas, and, besides computer science, he has a passion for history and cooking delicious food.
+                    </p>
+                </div>
+                <div class="profile">
+                    <img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-1/p160x160/22141093_10100176047706513_2630342832159279925_n.jpg?_nc_cat=106&_nc_ht=scontent-iad3-1.xx&oh=3c1f9e35fcae73991df3d6b874dcda2f&oe=5C9ABCA9" alt="Picture of Mrs. Hockaday" id="kaylin-hat">
+                    <p class="p-text">
+                        <span class="p-header">Mrs. Kaylin Hockaday</span> teaches the required middle school technology courses as well as one middle school and one high school elective focused on principles of digital design and content creation.  She has a masters degree, and she has a passion for photography and Poland.
+                    </p>
+                </div>
+                <div class="profile">
+                    <img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-1/p160x160/19105811_1452551891471125_2245642921203902904_n.jpg?_nc_cat=106&_nc_ht=scontent-iad3-1.xx&oh=743c3c62dced69a5c3d826a555830c94&oe=5C64770F" id="joel-news">
+                    <p class="p-text">
+                        <span class="p-header">Mr. Joel Steindel</span> is the STEM coordinator at WCA, a position which makes him a close friend and partner of the Technology and Digital Media Program.  He teaches STEM classes for elementary and middle school students to inspire their imaginations and stoke their curiosity.  He leads programs like the LEGO robotics club and also supports kids as an enthusiastic Baseball coach.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
